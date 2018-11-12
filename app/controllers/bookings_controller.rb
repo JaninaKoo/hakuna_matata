@@ -1,13 +1,17 @@
 class BookingsController < ApplicationController
-  def index
-  end
-
   def create
-  end
-
-  def show
+    @booking = Booking.new(booking_params)
+    @booking.save
   end
 
   def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date, :total_price)
   end
 end
