@@ -1,2 +1,15 @@
 <h1>Beaches#new</h1>
 <p>Find me in app/views/beaches/new.html.erb</p>
+
+<!-- If the user is an owner -->
+
+<%= simple_form_for (@beach) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :location %>
+  <%= f.input :description, as: :text, placeholder: 'Please describe the location' %>
+  <%= f.input :price %>
+  <%= f.submit "Add your listing", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Go back", beaches_path %>
+
