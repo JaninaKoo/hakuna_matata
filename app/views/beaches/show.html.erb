@@ -1,2 +1,7 @@
 <h1>Beaches#show</h1>
 <p>Find me in app/views/beaches/show.html.erb</p>
+<h2><%= @beach.name %></h2>
+<p><%= @beach.location %></p>
+<p><%= @beach.description %></p>
+<p><%= @beach.price %></p>
+<%= link_to "Go back", beaches_path %>

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'beaches/:id', to: "beaches#show"
-  get 'beaches/new', to: "beaches#new"
-  post 'beaches', to: "beaches#create"
+  resources :beaches, only: [:new, :create, :show, :index]
 
   get 'bookings', to: "bookings#index"
   post 'bookings', to: "bookings#create"
