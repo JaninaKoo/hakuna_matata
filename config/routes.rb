@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'my_beaches', to: "beaches#my_beaches"
 
   devise_for :users
+  get 'design', to: "designs#index"
 
   root to: 'beaches#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
