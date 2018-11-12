@@ -6,6 +6,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'devise'
 
+gem 'carrierwave', '~> 1.2'
+
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
