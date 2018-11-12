@@ -13,4 +13,7 @@ class BeachesController < ApplicationController
 
   def destroy
   end
+
+  def my_beaches
+  end
 end
