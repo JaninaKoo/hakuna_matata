@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.4.4'
 
+# secret keys for Github
+gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'devise'
 
 gem 'bootsnap', require: false
