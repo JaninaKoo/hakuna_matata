@@ -10,6 +10,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'devise'
 
 gem 'carrierwave', '~> 1.2'
+gem 'faker'
 
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
