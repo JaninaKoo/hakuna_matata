@@ -4,6 +4,8 @@
 <p><%= @beach.location %></p>
 <p><%= @beach.description %></p>
 <p><%= @beach.price %></p>
+<%= image_tag @beach.photo_url, height: 150, width: 100, crop: :fill %>
+
 
 <h2>Book this beach</h2>
 <%= simple_form_for [@beach, @booking] do |f| %>

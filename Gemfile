@@ -5,11 +5,12 @@ ruby '2.4.4'
 gem 'dotenv-rails', groups: [:development, :test]
 
 # cloudinary
-gem 'cloudinary'
+# gem 'cloudinary'
 
 gem 'devise'
 
 gem 'carrierwave', '~> 1.2'
+gem 'faker'
 
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
