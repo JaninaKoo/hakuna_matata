@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'beaches#index'
+  root to: 'beaches#home'
   resources :beaches, only: [:new, :create, :show, :index] do
     resources :bookings, only: [:create]
   end
