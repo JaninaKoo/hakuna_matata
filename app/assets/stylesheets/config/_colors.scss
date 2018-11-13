@@ -8,3 +8,76 @@ $orange: #E67E22;
 $green: #32B796;
 $gray: #000000;
 $light-gray: #F4F4F4;
+$light-yellow:#ff9000;
+$light-orange:#ffd700;
+
+
+
+.color-sample {
+
+  width: 100px;
+
+  height: 100px;
+
+}
+
+.div-with-flex {
+
+  display: flex;
+
+}
+
+.gray {
+
+  background-color: $gray;
+
+}
+
+.blue {
+
+  background-color: $blue;
+
+}
+
+.green {
+
+  background-color: $green;
+
+}
+
+.yellow {
+
+  background-color: $yellow;
+
+}
+
+.red {
+
+  background-color: $red;
+
+}
+
+.orange {
+
+  background-color: $orange;
+
+}
+
+.light-gray {
+
+  background-color: $light-gray;
+
+}
+
+.light-orange {
+
+  background-color: $light-orange;
+
+}
+
+.light-yellow {
+
+  background-color: $light-yellow;
+
+}
+

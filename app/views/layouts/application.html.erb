@@ -69,13 +69,14 @@
     </div>
   </div>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/flashes' %>
     <%= yield %>
 
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
 
+    <%= render 'shared/footer' %>
 
   </body>
   <div class="footer">

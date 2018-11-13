@@ -2,6 +2,9 @@ class BeachesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_beach, only: [:show, :destroy]
 
+  def home
+  end
+
   def index
     @beaches = Beach.all
   end
