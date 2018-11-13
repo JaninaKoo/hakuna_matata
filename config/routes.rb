@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :beaches, only: [:new, :create, :show, :index] do
     resources :bookings, only: [:create]
   end
-
+  get 'dashboard', to: "dashboard#show", as: 'dashboard'
   get 'bookings', to: "bookings#index"
   delete 'bookings/:id', to: "bookings#destroy"
 
