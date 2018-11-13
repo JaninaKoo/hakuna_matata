@@ -2,7 +2,7 @@
   <div class="row">
     <% @beaches.each do |beach| %>
     <div class="col-xs-12 col-sm-4">
-     <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url(<%= asset_path 'syd-sujuaan-293256-unsplash.jpg' %>);">
+     <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url(<%= beach.photo %>);">
       <div class="card-category">Luxury Resort</div>
       <div class="card-description">
         <h2><%= link_to beach.name, beach_path(beach) %></h2>
