@@ -1,4 +1,5 @@
 class BeachesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_beach, only: [:show, :destroy]
 
   def index
@@ -16,7 +17,8 @@ class BeachesController < ApplicationController
   def create
     @beach = Beach.new(beach_params)
     @beach.user = current_user
-    if @beach.save
+
+    if @beach.save!
       redirect_to beach_path(@beach)
     else
       render :new
@@ -38,6 +40,6 @@ class BeachesController < ApplicationController
   end
 
   def beach_params
-    params.require(:beach).permit(:name, :location, :description, :price, :photo)
+    params.require(:beach).permit(:name, :location, :description, :price, :photo, :photo_cache)
   end
 end

@@ -3,5 +3,7 @@ class Beach < ApplicationRecord
   validates :name, presence: true
   validates :location, presence: true
   validates :description, presence: true
-  validates :price, presence: true, format: { with: /\d+\,{1}\d{2}/ }
+  validates :price, presence: true
+
+  mount_uploader :photo, PhotoUploader
 end
