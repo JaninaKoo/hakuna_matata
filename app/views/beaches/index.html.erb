@@ -2,10 +2,8 @@
 <p>Find me in app/views/beaches/index.html.erb</p>
 
 <% @beaches.each do |beach| %>
-  <h2><%= beach.name %></h2>
-  <p><%= beach.location %></p>
-  <p><%= beach.description %></p>
-  <p><%= beach.price %></p>
+  <h2><%= link_to beach.name, beach_path(beach) %></h2>
+  <p><%= beach.price %>  per night </p>
 <% end %>
 
 <%= link_to "Add a new listing", new_beach_path(@beach) %>

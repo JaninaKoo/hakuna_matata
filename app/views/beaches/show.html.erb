@@ -4,4 +4,11 @@
 <p><%= @beach.location %></p>
 <p><%= @beach.description %></p>
 <p><%= @beach.price %></p>
+
+<h2>Book this beach</h2>
+<%= simple_form_for [@beach, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit %>
+<% end %>
 <%= link_to "Go back", beaches_path %>
