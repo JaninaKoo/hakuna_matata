@@ -1,0 +1,97 @@
+<div class="navbar-umbrella">
+  <!-- Logo -->
+  <a href="/" class="navbar-umbrella-brand">
+     <img src="<%= asset_path 'logo.svg' %>" alt="logo">
+
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+    <a href="" class="navbar-umbrella-item navbar-umbrella-link"></a>
+    <a href="" class="navbar-umbrella-item navbar-umbrella-link"></a>
+    <a href="" class="navbar-umbrella-item navbar-umbrella-link"></a>
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-umbrella-item">
+      <div class="dropdown">
+        <img src= "<%= asset_path 'user-ninja-solid.svg'%>" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-umbrella-dropdown-menu">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-umbrella-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-umbrella-dropdown-menu">
+        <li><a href="#">"Log in "</a></li>
+        <li><a href="#">"my beaches"</a></li>
+        <li><a href="#">"messages"</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+     <div class="col-xs-12 col-sm-4">
+     <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url(<%= asset_path 'syd-sujuaan-293256-unsplash.jpg' %>);">
+        <div class="card-category">Luxury Resort</div>
+        <div class="card-description">
+          <h2>Zanzibar</h2>
+          <p>The best beaches in Zanzibar</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+     <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url(<%= asset_path 'pineapple-supply-co-244468-unsplash.jpg' %>);">
+        <div class="card-category">Luxury Resort</div>
+        <div class="card-description">
+          <h2>Carlifornia</h2>
+          <p>Unforgetable experience</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url(<%= asset_path 'jared-rice-388256-unsplash.jpg' %>);">
+        <div class="card-category">Luxury Resort</div>
+        <div class="card-description">
+          <h2>Greece</h2>
+          <p>The best island in Greece</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<h1>Buttons</h1>
+
+
+<a href="#" class="btn-medium">Write a story</a>
+<a href="#" class="btn-treehouse">Start now</a>
+
+<div id= "container">
+<a href="#" id= "button1" class="btn">button1</a>
+<a href="#" id= "button2" class="btn">button2</a>
+</div>
+
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+  </div>
+</div>
