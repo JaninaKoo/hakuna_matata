@@ -4,9 +4,6 @@ ruby '2.4.4'
 # secret keys for Github
 gem 'dotenv-rails', groups: [:development, :test]
 
-# cloudinary
-gem 'cloudinary'
-
 gem 'devise'
 
 gem 'carrierwave', '~> 1.2'

@@ -5,5 +5,5 @@ class Beach < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
 
-  mount_uploader :photo, PhotoUploader
+  mount_uploader :photo
 end
