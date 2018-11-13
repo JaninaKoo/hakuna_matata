@@ -3,10 +3,10 @@
     <% @beaches.each do |beach| %>
     <div class="col-xs-12 col-sm-4">
      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url(<%= beach.photo %>);">
-      <div class="card-category">Luxury Resort</div>
+      <div class="card-category"><strong>Luxury Resort</strong></div>
       <div class="card-description">
-        <h2><%= link_to beach.name, beach_path(beach) %></h2>
-        <p><%= beach.price %>  per night </p>
+        <h2><strong><%= link_to beach.name, beach_path(beach) %></strong></h2>
+        <p><strong><%= beach.price %> per night</p></strong>
       </div>
     </div>
   </div>

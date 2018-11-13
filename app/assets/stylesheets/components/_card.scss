@@ -5,6 +5,9 @@
   background-position: center;
   color: white;
   position: relative;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  box-shadow:10px, 10px
 
 }
 .card-user {
@@ -48,5 +51,5 @@
   opacity: 0.1;
 }
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0.8px 16px 0 rgba(0,0,0,0.2);
 }
