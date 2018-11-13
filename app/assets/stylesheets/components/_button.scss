@@ -1,58 +1,9 @@
-.btn-medium {
-  color: #999999;
-  border: 1px solid #999999;
-  padding: 10px 15px;
+.btn {
   border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-}
-.btn-medium:hover {
-  opacity: 1;
-  text-decoration: none;
-  color: #999999;
-}
-.btn-treehouse {
-  color: white;
   padding: 10px 15px;
-  border-radius: 40px;
-  font-weight: bold;
-  background: #6AD58B;
-  transition: background 0.3s ease;
+  font-weight:bold;
+  transition: background-color 0.5s ease;
 }
-.btn-treehouse:hover {
-  opacity: 1;
-  background: #3ac162;
-  text-decoration: none;
-  color: white;
-}
-
-#button1 {
-background-color: #ff9000;
-color: #00a6ff;
-border-radius: 10px;
-margin: 10px;
-}
-
-#button2 {
-background-color:#ffd700;
-color:white;
-border-radius: 30px;
-text-align: center;
-width: 160px;
-padding: 5px;
-margin-top: 20px;
-
-}
-
-#a:hover {
-  opacity: 1;
-  background: #3ac162;
-  text-decoration: none;
-  color: white;
-}
-#b:hover{
-  opacity: 1;
-  background: lighgrey;
-  text-decoration: none;
-  color: white;
+.btn-lg{
+  padding: 20px 60px;
 }
