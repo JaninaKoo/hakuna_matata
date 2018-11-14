@@ -1,1 +1,22 @@
-<h1>THIS IS YOUR DASHBOARD! WOO HOO</h1>
+<div class="container">
+  <h1>List of bookings </h1>
+  <h3>by <%= current_user.email %></h3>
+  <div class="row">
+    <ul>
+      <% current_user.bookings.each do |booking| %>
+      <div class="col-xs-6">
+        <li><strong><%= booking.beach.name %></strong></li>
+        <li><%= booking.beach.location %></li>
+        <li><%= booking.beach.description %></li>
+        <li><%= booking.beach.price %></li>
+      </div>
+      <div class="col-xs-6">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url(<%= booking.beach.photo %>);">
+        </div>
+      </div>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+
