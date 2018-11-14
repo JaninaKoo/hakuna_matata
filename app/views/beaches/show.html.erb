@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="row">
+<div class="container" style="height: 100vh">
+  <div class="row" style="padding-top: 50px">
     <div class="col-sm-6">
       <h2><%= @beach.name %> Beach </h2>
       <p><%= @beach.location %></p>
@@ -12,27 +12,12 @@
       <div class="start_date" style="width:300px"><%= f.input :start_date %>
       <%= f.input :end_date %>
       </div>
-      <%= f.submit %> <%= link_to "Go back", beaches_path %>
+      <%= f.submit %>
       <% end %>
       <% end %>
     </div>
     <div class="col-sm-6" style="padding-top: 80px">
       <%= image_tag @beach.photo_url, height: 400, width: 600, crop: :fill %>
     </div>
-
-
-<h2>Book this beach</h2>
-<% if user_signed_in? %>
-  <%= simple_form_for [@beach, @booking] do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-    <%= f.submit "Book ", class: "btn btn-success" %>
-  <% end %>
-<% else %>
-  <p>Please Log-in to Book Or Create an Account</p>
-  <%= link_to "Log-in", new_user_session_path, class:"btn btn-success" %>
-  <%= link_to "Create-An-Account", new_user_session_path, class:"btn btn-default" %>
-<% end %>
-<%= link_to "Go back", beaches_path, class:"btn btn-link" %>
   </div>
 </div>

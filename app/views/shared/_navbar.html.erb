@@ -5,6 +5,7 @@
 
     <!-- Right Navigation -->
     <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <div class="navbar-umbrella-item">
 
     <!-- View owner -->
       <% if user_signed_in? && current_user.owner?  %>
@@ -12,14 +13,12 @@
 
       <a href="<%= dashboard_path %>" class="navbar-umbrella-item navbar-umbrella-link">My listings</a>
       <a href="<%= bookings_path %>" class="navbar-umbrella-item navbar-umbrella-link">Booking Requests</a>
-      <div class="navbar-umbrella-item">
         <div class="dropdown">
           <img src= "<%= asset_path 'user-ninja-solid.svg'%>" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
           <ul class="dropdown-menu dropdown-menu-right navbar-umbrella-dropdown-menu">
             <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
           </ul>
         </div>
-      </div>
 
     <!-- View Tourist -->
       <% elsif user_signed_in?%>
@@ -44,6 +43,7 @@
       </div>
       <% end %>
 
+      </div>
     </div>
 
     <div class="navbar-umbrella-item hidden-md hidden-lg">
