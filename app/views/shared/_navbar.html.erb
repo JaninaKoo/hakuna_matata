@@ -9,6 +9,7 @@
     <!-- View owner -->
 
       <% if current_user.owner?  %>
+      <a href="<%= new_beach_path %>" class="navbar-umbrella-item navbar-umbrella-link">Add listing</a>
       <a href="<%= dashboard_path %>" class="navbar-umbrella-item navbar-umbrella-link">My listings</a>
       <a href="<%= bookings_path %>" class="navbar-umbrella-item navbar-umbrella-link">Booking Requests</a>
 
