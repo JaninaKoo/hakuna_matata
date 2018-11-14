@@ -1,14 +1,15 @@
 <div class="container">
-  <h1>My beaches</h1>
-  <h3>by <%= current_user.email %></h3>
+  <div class="row">
     <% current_user.beaches.each do |beach| %>
+    <div class="col-xs-12 col-sm-4">
     <%= render 'shared/card', beach: beach %>
+    </div>
     <% end %>
+  </div>
 </div>
 
 <div class="container">
-  <h1>List of bookings </h1>
-  <h3>by <%= current_user.email %></h3>
+  <h1>Future trips</h1>
   <div class="row">
     <ul>
       <% current_user.bookings.each do |booking| %>
