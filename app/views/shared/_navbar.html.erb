@@ -8,7 +8,7 @@
     <div class="navbar-umbrella-right hidden-xs hidden-sm">
       <div class="navbar-umbrella-links hidden-xs">
         <a href="<%= new_beach_path %>" class="navbar-umbrella-item navbar-umbrella-link">Add a listing</a>
-        <% if current_user.owner? %>
+        <% if current_user && current_user.owner? %>
           <a href="<%= dashboard_path %>" class="navbar-umbrella-item navbar-umbrella-link">My beaches</a>
         <% else %>
           <a href="<%= dashboard_path %>" class="navbar-umbrella-item navbar-umbrella-link">My bookings</a>
