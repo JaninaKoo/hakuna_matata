@@ -8,9 +8,15 @@
 
 
 <h2>Book this beach</h2>
-<%= simple_form_for [@beach, @booking] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit %>
+<% if user_signed_in? %>
+  <%= simple_form_for [@beach, @booking] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.submit "Book ", class: "btn btn-success" %>
+  <% end %>
+<% else %>
+  <p>Please Log-in to Book Or Create an Account</p>
+  <%= link_to "Log-in", new_user_session_path, class:"btn btn-success" %>
+  <%= link_to "Create-An-Account", new_user_session_path, class:"btn btn-default" %>
 <% end %>
-<%= link_to "Go back", beaches_path %>
+<%= link_to "Go back", beaches_path, class:"btn btn-link" %>
