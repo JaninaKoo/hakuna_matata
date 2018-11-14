@@ -21,7 +21,12 @@
         <div class="dropdown">
           <img src= "<%= asset_path 'user-ninja-solid.svg'%>" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
           <ul class="dropdown-menu dropdown-menu-right navbar-umbrella-dropdown-menu">
-            <li><%= link_to "Log Out", beaches_path %></li>
+            <!-- <li><a href="#">Profile</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Log Out</a></li> -->
+            <li><%= link_to "Profile", beaches_path %></li>
+            <li><%= link_to "Dashboard", beaches_path %></li>
+            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
           </ul>
         </div>
       </div>
