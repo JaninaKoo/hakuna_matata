@@ -6,10 +6,16 @@
     <!-- Right Navigation -->
     <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-      <a href="" class="navbar-umbrella-item navbar-umbrella-link"></a>
-      <a href="" class="navbar-umbrella-item navbar-umbrella-link"></a>
-      <a href="" class="navbar-umbrella-item navbar-umbrella-link"></a>
+    <!-- View owner -->
 
+      <% if current_user.owner?  %>
+      <a href="<%= dashboard_path %>" class="navbar-umbrella-item navbar-umbrella-link">My listings</a>
+      <a href="<%= bookings_path %>" class="navbar-umbrella-item navbar-umbrella-link">Booking Requests</a>
+
+    <!-- View Tourist -->
+      <% else %>
+      <a href="<%= bookings_path %>" class="navbar-umbrella-item navbar-umbrella-link">My bookings</a>
+      <% end %>
       <!-- Profile picture with dropdown list -->
       <div class="navbar-umbrella-item">
         <div class="dropdown">
