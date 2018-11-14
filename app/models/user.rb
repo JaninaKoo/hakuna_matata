@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :beaches
   has_many :bookings
+
+  def owner?
+    beaches.count != 0
+  end
 end
