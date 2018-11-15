@@ -1,15 +1,46 @@
-.login-container {
-  min-height: 100vh;
+.form-post {
+  background: white;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0px;
+    background-color: white;
+    border-style: none;
+    color: #464444;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+  }
+
+  .text-form {
+    text-transform: uppercase;
+  }
+}
+  .btn:hover {
+    border: 1px solid #464444;
+    transition: .8s ease;
+  }
+
+.checkbox-form {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.login {
-  margin: 20px auto;
-  width: 300px;
-}
-.login-form {
-  text-align: center;
+.check {
+  flex: 0;
+  margin-right: 8px;
 }
 
-.login-text {
-  text-align: center;
+.form-check-label {
+  flex: 1;
+  font-weight: lighter;
+  font-size: 12px;
 }
