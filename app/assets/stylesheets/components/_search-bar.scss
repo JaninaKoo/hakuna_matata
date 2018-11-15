@@ -1,0 +1,19 @@
+.beach-search-bar {
+  width: 500px !important;
+  max-height: 34px;
+  border-radius: 10px 0px 0px 10px;
+  border-right: none;
+  margin-top: 10px;
+
+}
+
+.button-search {
+    padding: 2px 15px 5px 15px;
+    margin-top: 10px;
+    margin-left: -5px;
+    border-radius: 0px 10px 10px 0px;
+    border-left: none;
+    font-weight: normal;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
