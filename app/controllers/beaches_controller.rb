@@ -7,6 +7,15 @@ class BeachesController < ApplicationController
 
   def index
     @beaches = Beach.all
+    @beaches = Beach.where.not(latitude: nil, longitude: nil)
+      @markers = @beaches.map do |beach|
+        {
+        lng: beach.longitude,
+        lat: beach.latitude,
+        infoWindow: { content: render_to_string(partial: "/shared/map_window", locals: { beach: beach }) }
+        }
+
+      end
   end
 
   def new

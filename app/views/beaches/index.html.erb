@@ -1,11 +1,21 @@
-<div class="container">
-  <div class="row">
-    <% @beaches.each do |beach| %>
-      <div class="col-xs-12 col-sm-4">
-        <%= render partial: 'shared/card', locals: { beach: beach } %>
-      </div>
-    <% end %>
-  </div>
-</div>
+<div class="results-layout">
+  <div class="container">
+    <div class="row">
+      <% @beaches.each do |beach| %>
+        <div class="col-xs-12 col-sm-4">
+          <%= render partial: 'shared/card', locals: { beach: beach } %>
+        </div>
+      <% end %>
+    </div>
 
+  <div id="map" style="width: 100%;
+    height: 600px;" data-markers="<%= @markers.to_json %>">
+  </div>
+  <%= form_tag(beaches_path) do %>
+  <%= text_field_tag :query, "", id: "beach-location" %>
+  <% end -%>
+
+  </div>
+
+</div>
 
