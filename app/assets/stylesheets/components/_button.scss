@@ -7,3 +7,39 @@
 .btn-lg{
   padding: 20px 60px;
 }
+
+.button-homepage {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 20px;
+  border: 2px none #f7f7f7;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow:hidden;
+  transition: .9s;
+  color: #e6e6e6;
+  &:after {
+    position: absolute;
+    transition: .9s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #f7f7f7;
+    right: 0;
+    left: auto;
+    color: white;
+  }
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    &:after {
+      width: 100%;
+      left: 0;
+      color: #e6e6e6;
+    }
+  }
+}
