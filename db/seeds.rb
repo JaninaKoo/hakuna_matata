@@ -35,6 +35,9 @@ beaches = [
 ]
 
 beaches.each do |beach|
+  beach[:latitude] = Faker::Address.latitude
+  beach[:longitude] = Faker::Address.longitude
+
   Beach.create(beach)
   print "."
 end

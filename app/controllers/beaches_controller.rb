@@ -7,12 +7,12 @@ class BeachesController < ApplicationController
 
   def index
     @beaches = Beach.where.not(latitude: nil, longitude: nil)
-    
+
     if params[:query].present?
       sql_query = "name ILIKE :query OR location ILIKE :query"
       @beaches = @beaches.where(sql_query, query: "%#{params[:query]}%")
     end
-    
+
     @markers = @beaches.map do |beach|
       {
         lng: beach.longitude,
