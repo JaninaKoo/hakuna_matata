@@ -1,18 +1,16 @@
-<div class="container">
 
-  <!-- [...] -->
-<%= form_tag beaches_path, method: :get, class: "form-inline" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control beach-search-bar",
-    placeholder: "Find a beach" %>
-<%= submit_tag 'Search', class: "btn btn-primary button-search" %>
-<% end %>
-
-<div class="row">
+<div class="container cards-container">
+  <%= form_tag beaches_path, method: :get, class: "form-inline" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control beach-search-bar",
+      placeholder: "Find a beach" %>
+    <%= submit_tag 'Search', class: "btn btn-primary button-search" %>
+  <% end %>
+  <div class="row">
     <% @beaches.each do |beach| %>
       <div class="col-xs-12 col-sm-4">
-        <%= render partial: 'shared/card', locals: { beach: beach } %>
+        <%= render 'shared/card', beach: beach %>
       </div>
     <% end %>
   </div>
