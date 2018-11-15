@@ -1,18 +1,21 @@
-<h1>Beaches#new</h1>
-<p>Find me in app/views/beaches/new.html.erb</p>
+<div class="container">
+  <div class="row" style="padding-top: 50px">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h1>List your Beach here</h1>
 
-<!-- If the user is an owner -->
+      <!-- If the user is an owner -->
+      <%= simple_form_for (@beach) do |f| %>
+        <%= f.input :name, label_html: {class: "hakuna-form-label"} %>
+        <%= f.input :location, label_html: {class: "hakuna-form-label"} %>
+        <%= f.input :description, label_html: {class: "hakuna-form-label"}, as: :text, placeholder: 'Please describe the location' %>
+        <%= f.input :price, label_html: {class: "hakuna-form-label"} %>
+        <%= f.input :photo, label_html: {class: "hakuna-form-label"} %>
+        <%= f.input :photo_cache, as: :hidden %>
 
-<%= simple_form_for (@beach) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :location %>
-  <%= f.input :description, as: :text, placeholder: 'Please describe the location' %>
-  <%= f.input :price %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
+        <%= f.submit "Add your listing", class: "btn btn-success" %>
+      <% end %>
 
-  <%= f.submit "Add your listing", class: "btn btn-success" %>
-<% end %>
-
-<%= link_to "Go back", beaches_path %>
-
+      <%= link_to "Go back", beaches_path %>
+    </div>
+  </div>
+</div>

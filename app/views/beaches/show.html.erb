@@ -1,18 +1,23 @@
-<h1>Beaches#show</h1>
-<p>Find me in app/views/beaches/show.html.erb</p>
-<h2><%= @beach.name %></h2>
-<p><%= @beach.location %></p>
-<p><%= @beach.description %></p>
-<p><%= @beach.price %></p>
-<%= image_tag @beach.photo_url, height: 150, width: 100, crop: :fill %>
-
-
-<h2>Book this beach</h2>
-  <%= simple_form_for [@beach, @booking] do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-    <%= f.submit "Book ", class: "btn btn-success" %>
-  <% end %>
-<%= link_to "Go back", beaches_path, class:"btn btn-link" %>
-
-
+<div class="container" style="height: 100vh">
+  <div class="row" style="padding-top: 50px">
+    <div class="col-sm-6">
+      <h2><%= @beach.name %> Beach </h2>
+      <p><%= @beach.location %></p>
+      <p><%= @beach.description %></p>
+      <p><%= @beach.price %> EUR per night</p>
+      <% if user_signed_in? && current_user.owner? %>
+      <h4>Booking calendar:</h4>
+      <% else %>
+      <%= simple_form_for [@beach, @booking] do |f| %>
+      <div class="start_date" style="width:300px"><%= f.input :start_date %>
+      <%= f.input :end_date %>
+      </div>
+      <%= f.submit "Book", class:"btn btn-link" %>
+      <% end %>
+      <% end %>
+    </div>
+    <div class="col-sm-6" style="padding-top: 80px">
+      <%= image_tag @beach.photo_url, height: 400, width: 600, crop: :fill %>
+    </div>
+  </div>
+</div>
