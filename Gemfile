@@ -3,8 +3,10 @@ ruby '2.4.4'
 
 # secret keys for Github
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'devise'
+gem "geocoder"
 
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
