@@ -5,12 +5,10 @@ ruby '2.4.4'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'dotenv-rails', groups: [:development, :test]
 
-# cloudinary
-# gem 'cloudinary'
-
 gem 'devise'
 gem "geocoder"
 
+gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 gem 'faker'
 

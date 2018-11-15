@@ -1,14 +1,23 @@
 <div class="container">
-  <h1>List of bookings </h1>
-  <h3>by <%= current_user.email %></h3>
+  <div class="row" style="padding-top: 50px">
+    <% current_user.beaches.each do |beach| %>
+    <div class="col-xs-12 col-sm-4">
+    <%= render 'shared/card', beach: beach %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container" style="height: 100vh">
+  <h1>My Beaches Bookings</h1>
   <div class="row">
     <ul>
       <% current_user.bookings.each do |booking| %>
       <div class="col-xs-6">
-        <li><strong><%= booking.beach.name %></strong></li>
-        <li><%= booking.beach.location %></li>
-        <li><%= booking.beach.description %></li>
-        <li><%= booking.beach.price %></li>
+        <li><strong>The Beach: <%= booking.beach.name %></strong></li>
+        <li>Location: <%= booking.beach.location %></li>
+        <li>About the beach: <%= booking.beach.description %></li>
+        <li>Price: <%= booking.beach.price %>€ / day</li>
       </div>
       <div class="col-xs-6">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url(<%= booking.beach.photo %>);">
