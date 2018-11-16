@@ -1,13 +1,12 @@
-.results-layout{
+.results-layout {
   display: grid;
-  grid-template.columns: 1fr 400px;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+  padding: 40px;
 }
 
 
-@media (max-width: 700px){
-  .results-layout {
-    display: block;
-}
+
 // @media (max-width: 700px) {
 //   .container {
 //     display: block;
