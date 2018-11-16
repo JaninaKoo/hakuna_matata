@@ -1,14 +1,4 @@
-<!-- <div class="container">
-  <div class="row" style="padding-top: 50px">
-    <% current_user.beaches.each do |beach| %>
-    <div class="col-xs-12 col-sm-4">
-    <!-- <%= render 'shared/card', beach: beach %> -->
-    </div>
-    <% end %>
-  </div>
-</div> -->
-
-<div class="container" style="height: 100vh">
+<div class="container bookings-container" style="height: 100vh">
   <h1>My Beaches Bookings</h1>
   <div class="row">
     <ul>
@@ -20,9 +10,7 @@
         <li>Reservation from <%= booking.start_date %> to <%= booking.end_date %></li>
         <li>Price: <%= booking.beach.price %>€ / day</li>
       </div>
-      <div class="col-xs-6">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url(<%= booking.beach.photo %>);">
-        </div>
+      <div class="card" style="background-image: linear-gradient(0deg, rgba(255, 248, 184, 0.20) 50%, rgba(255, 251, 235, 0.48) 80%),url(<%= booking.beach.photo %>);">
       </div>
       <% end %>
     </ul>

@@ -1,23 +1,27 @@
-<div class="container" style="height: 100vh">
+<div class="container bookings-container" style="height: 100vh">
   <div class="row" style="padding-top: 50px">
-    <div class="col-sm-6">
-      <h2><%= @beach.name %> Beach </h2>
+    <div class="col-xs-6">
+      <h1><%= @beach.name %> Beach </h1>
       <p><%= @beach.location %></p>
       <p><%= @beach.description %></p>
-      <p><%= @beach.price %> EUR per night</p>
-      <% if user_signed_in? && current_user.owner? %>
-      <h4>Booking calendar:</h4>
+      <p><%= @beach.price %> € / day</p>
+      <% if user_signed_in? %>
+        <h2>Booking calendar:</h2>
+        <%= simple_form_for [@beach, @booking] do |f| %>
+          <div class="start_date" style="width:300px"><%= f.input :start_date %>
+          <%= f.input :end_date %>
+          </div>
+          <%= f.submit %>
+        <% end %>
       <% else %>
-      <%= simple_form_for [@beach, @booking] do |f| %>
-      <div class="start_date" style="width:300px"><%= f.input :start_date %>
-      <%= f.input :end_date %>
-      </div>
-      <%= f.submit "Book", class:"btn btn-link" %>
-      <% end %>
+        <%= link_to "Login to book", new_user_session_path %>
       <% end %>
     </div>
-    <div class="col-sm-6" style="padding-top: 80px">
-      <%= image_tag @beach.photo_url, height: 400, width: 600, crop: :fill %>
+    <div class="col-xs-6">
+      <div class="card" style="background-image: linear-gradient(0deg, rgba(255, 248, 184, 0.20) 50%, rgba(255, 251, 235, 0.48) 80%),url(<%= @beach.photo %>);">s
+      </div>
     </div>
   </div>
 </div>
+
+
