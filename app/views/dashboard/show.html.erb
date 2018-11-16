@@ -1,12 +1,12 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row" style="padding-top: 50px">
     <% current_user.beaches.each do |beach| %>
     <div class="col-xs-12 col-sm-4">
-    <%= render 'shared/card', beach: beach %>
+    <!-- <%= render 'shared/card', beach: beach %> -->
     </div>
     <% end %>
   </div>
-</div>
+</div> -->
 
 <div class="container" style="height: 100vh">
   <h1>My Beaches Bookings</h1>
@@ -14,9 +14,10 @@
     <ul>
       <% current_user.bookings.each do |booking| %>
       <div class="col-xs-6">
-        <li><strong>The Beach: <%= booking.beach.name %></strong></li>
-        <li>Location: <%= booking.beach.location %></li>
+        <li><p class="beach-name">The Beach: <%= booking.beach.name %></p></li>
         <li>About the beach: <%= booking.beach.description %></li>
+        <li>Location: <%= booking.beach.location %></li>
+        <li>Reservation from <%= booking.start_date %> to <%= booking.end_date %></li>
         <li>Price: <%= booking.beach.price %>€ / day</li>
       </div>
       <div class="col-xs-6">
