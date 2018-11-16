@@ -7,6 +7,38 @@
   padding: 20px 60px;
 }
 
+#button-booking {
+    padding: 5px 15px;
+    border: 2px solid #469ae0;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: .9s;
+    color: #469ae0;
+    font-weight: lighter;
+      &:after {
+    position: absolute;
+    transition: .9s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #f7f7f7;
+    right: 0;
+    left: auto;
+    color: white;
+  }
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bolder;
+    &:after {
+      width: 100%;
+      left: 0;
+      color: #e6e6e6;
+    }
+  }
+}
 .button-homepage {
   flex: 1 1 auto;
   margin: 10px;
