@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.total_price = @booking.beach.price * (@booking.end_date - @booking.start_date).to_i
     @booking.save
-    redirect_to dashboard_path
+    redirect_to dashboard_path, notice: "Congratulations, You have a new Booking"
   end
 
   def destroy
